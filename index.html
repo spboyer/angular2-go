@@ -2,22 +2,37 @@
 <html>
 
 <head>
-  <base href="/"/>
+  <base href="/" />
   <link rel="stylesheet" href="styles.css">
   <script src="node_modules/traceur/bin/traceur-runtime.js"></script>
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
   <script src="node_modules/angular2/bundles/router.dev.js"></script>
+  <!-- material design lite -->
+  <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+  <script src="bower_components/material-design-lite/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <!-- material design lite -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <my-app>Loading...</my-app>
-  <script>
-    System.config({
-      packages: {'src': {defaultExtension: 'js'}}
-    });
-    System.import('src/bootstrap');
-  </script>
-</body>
+  <div class="mdl-layout mdl-js-layout">
+  <my-app>
+  <!-- Always shows a header, even in smaller screens. -->
+  
 
+
+  
+  Loading...
+  </my-app>
+  </div>
+        <script>
+          System.config({
+            packages: {'src': {defaultExtension: 'js'}}
+          });
+          System.import('src/bootstrap');
+        </script>
+</body>
 </html>

@@ -1,4 +1,8 @@
-h2 { color: #444; font-weight: lighter; }
-body { margin: 2em; }
+/*h2 { color: #444; font-weight: lighter; }*/
+body { margin: 0; }
 body, input[text], button { color: #888; font-family: Cambria, Georgia; }
 button {padding: 0.2em; font-size: 14px}
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}

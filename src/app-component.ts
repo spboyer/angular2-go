@@ -6,8 +6,24 @@ import {DashboardComponent} from './dashboard-component';
 @Component({ selector: 'my-app' })
 @View({
   template: `
-    <a [router-link]="['./dashboard']">Dashboard</a>
-    <a [router-link]="['./characters']">Characters</a>
+    <header class="mdl-layout__header">
+      <div class="mdl-layout-icon"></div>
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">angular2-go</span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" [router-link]="['./dashboard']">Dashboard</a>
+          <a class="mdl-navigation__link" [router-link]="['./characters']">Characters</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">angular2-go</spano
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" [router-link]="['./dashboard']">Dashboard</a>
+        <a class="mdl-navigation__link" [router-link]="['./characters']">Characters</a>
+      </nav>
+    </div>
     <router-outlet></router-outlet>
     `,
   directives: [ROUTER_DIRECTIVES]
@@ -17,3 +33,4 @@ import {DashboardComponent} from './dashboard-component';
   { path: '/characters', as: 'characters', component: CharactersComponent }
 ])
 export class AppComponent { }
+
